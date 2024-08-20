@@ -1,0 +1,22 @@
+print('Programa de descontos!\n')
+produto = int(input('Digite o valor do produto:'))
+desconto = produto - (produto*10/100)
+acrescimo = produto + (produto*15/100)
+
+pagamento =int(input('\nEscolha a forma de pagamento:\n1 - A vista desconto de 10%\n2 - Parcelado 15% de acrescimo\n3 - porcentagem manual\nDigite o numero desejado para a forma de pagamento: '))
+
+if pagamento == int(1):
+    print('\nO valor do produto ficou R${:.2f}'.format(desconto))
+if pagamento == int(2):
+    print('\nO valor do produto ficou R${:.2f}'.format(acrescimo))
+if pagamento == int(3):
+    manual = int(input('\nVocê deseja dar desconto ou adicionar margem?\n1 - Desconto\n2 - Margem de Venda\nDigite o numero de acordo com o que deseja:'))
+        
+if manual == int(1):
+    descmanual = int(input('\nDigite a porcentagem de desconto:'))
+    descresul = produto - (produto*descmanual/100)
+    print('\nO valor do produto ficou R${:.2f}'.format(descresul))
+if manual == int(2):
+    descmanual = int(input('\nDigite a porcentagem de margem:'))
+    descresul = produto + (produto*descmanual/100)
+    print('\nO valor do produto ficou R${:.2f}'.format(descresul))    
